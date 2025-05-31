@@ -1,7 +1,7 @@
-﻿using System;
+﻿using FinalProjectDesign.Singleton;
 
 public class Program {
 	public static void Main(string[] args) {
-		Console.WriteLine("Ah...");
+		PrinterSingleton.getInstance().printNewLine(["Testing... ", "Testing...", "1...", "2...", "3..."]);
 	}
 }
