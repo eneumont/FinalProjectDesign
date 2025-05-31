@@ -24,7 +24,13 @@ namespace FinalProjectDesign.Singleton {
 
 		public void printNewLine(string[] ss) {
 			foreach (string s in ss) {
-				Console.Write(s);
+				Console.WriteLine(s);
+			}
+		}
+
+		public void printSpacedLines(string[] ss) {
+			foreach (string s in ss) {
+				Console.WriteLine(s + "\n");
 			}
 		}
 	}

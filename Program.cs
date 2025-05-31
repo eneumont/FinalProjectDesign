@@ -1,7 +1,8 @@
-﻿using FinalProjectDesign.Singleton;
+﻿using FinalProjectDesign.Bridge;
+using FinalProjectDesign.Singleton;
 
 public class Program {
 	public static void Main(string[] args) {
-		PrinterSingleton.getInstance().printNewLine(["Testing... ", "Testing...", "1...", "2...", "3..."]);
+		PrinterSingleton.getInstance().printSpacedLines([new Sheep(new makeAnimal(), "Shawn").make(), new Otter(new makeAnimal(), "Rosa").make()]);
 	}
 }
