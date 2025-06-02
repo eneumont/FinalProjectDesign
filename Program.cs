@@ -1,8 +1,10 @@
 ﻿using FinalProjectDesign.Bridge;
 using FinalProjectDesign.Singleton;
+using FinalProjectDesign.Visitor;
 
 public class Program {
 	public static void Main(string[] args) {
-		PrinterSingleton.getInstance().printSpacedLines([new Sheep(new makeAnimal(), "Shawn").make(), new Otter(new makeAnimal(), "Rosa").make()]);
+		new NameAndDescription().speak(new Farmer("Mike", [new Sheep(new makeAnimal(), "Aba"), new Sheep(new makeAnimal(), "Ben"), new Sheep(new makeAnimal(), "Coco"), new Otter(new makeAnimal(), "Ipapu")]));
+		new NameAndDescription().speak(new Collector("Sam", [AnimalType.Sheep, AnimalType.Otter]));
 	}
 }
